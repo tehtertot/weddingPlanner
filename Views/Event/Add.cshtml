@@ -1,0 +1,46 @@
+@Html.Partial("NavBar")
+@model wedding.Models.Wedding
+
+<h1>Plan Your Wedding</h1>
+<form asp-action="CreateWedding" method="post">
+    <div class="form-group row">
+        <label asp-for="WedderOne" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-6">
+        <input asp-for="WedderOne" class="form-control">
+        </div>
+        <div class="col-sm-3"><span class="rederror" asp-validation-for="WedderOne"></span></div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="WedderTwo" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-6">
+        <input asp-for="WedderTwo" class="form-control">
+        </div>
+        <div class="col-sm-3"><span class="rederror" asp-validation-for="WedderTwo"></span></div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="WeddingDate" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-6">
+        <input asp-for="WeddingDate" class="form-control">
+        </div>
+        <div class="col-sm-3"><span class="rederror" asp-validation-for="WeddingDate"></span></div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="WeddingAddress" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-6">
+        <input asp-for="WeddingAddress" class="form-control">
+        </div>
+        <div class="col-sm-3"><span class="rederror" asp-validation-for="WeddingAddress"></span></div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="WeddingCity" class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-5">
+        <input asp-for="WeddingCity" class="form-control" placeholder="city">
+        </div>
+        <div class="col-sm-1">
+        <input asp-for="WeddingState" class="form-control" placeholder="ST">
+        </div>
+        <div class="col-sm-3"><span class="rederror" asp-validation-for="WeddingCity"></span></div>
+        <div class="col-sm-3"><span class="rederror" asp-validation-for="WeddingState"></span></div>
+    </div>
+    <input type="submit" value="Create" class="btn btn-success">
+</form>
